@@ -1,0 +1,9 @@
+transaction_id,process_type,department,error_type,error_status,rework_required,rework_time,rejection_reason,employee,team,date,cost,customer_issue
+TX-901,Order Entry,Sales Ops,Data Entry Mismatch,Open,Yes,2.5,Incorrect SKU code,EMP-104,Team Alpha,2026-09-25,120.00,Yes
+TX-902,Invoice Verification,Finance,Missing PO Reference,Resolved,Yes,1.8,Unapproved Supplier,EMP-208,Team Beta,2026-09-25,85.00,No
+TX-903,Quality Inspection,Manufacturing,Tolerance Violation,Open,Yes,4.0,Dimension drift +0.3mm,EMP-312,Team Gamma,2026-09-26,450.00,Yes
+TX-904,Shipping Labeling,Logistics,Barcode Misprint,Resolved,Yes,0.8,Printer misalignment,EMP-401,Team Delta,2026-09-26,40.00,No
+TX-905,Order Entry,Sales Ops,Data Entry Mismatch,Open,Yes,3.0,Missing customer tax ID,EMP-104,Team Alpha,2026-09-27,150.00,Yes
+TX-906,Assembly Line 2,Manufacturing,Component Omission,Open,Yes,5.5,Missing seal gasket,EMP-315,Team Gamma,2026-09-27,620.00,Yes
+TX-907,Quality Inspection,Manufacturing,Tolerance Violation,Resolved,Yes,3.5,Surface scratch,EMP-312,Team Gamma,2026-09-28,310.00,No
+TX-908,Customs Documentation,Logistics,Hs Code Error,Open,Yes,6.0,Wrong HS classification,EMP-405,Team Delta,2026-09-28,890.00,Yes

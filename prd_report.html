@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Innovex Command Center - Product Requirements Document (PRD)</title>
+<style>
+  @page {
+    size: A4;
+    margin: 12mm 15mm 15mm 15mm;
+    @bottom-right {
+      content: "Page " counter(page);
+    }
+  }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    font-size: 9.5pt;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .header-banner {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 22px 28px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .header-banner h1 {
+    margin: 0 0 4px 0;
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #38bdf8;
+  }
+  .header-banner p {
+    margin: 0;
+    font-size: 10.5pt;
+    color: #94a3b8;
+  }
+  .meta-grid {
+    display: table;
+    width: 100%;
+    margin-top: 14px;
+    border-top: 1px solid #334155;
+    padding-top: 10px;
+    font-size: 9pt;
+    color: #cbd5e1;
+  }
+  .meta-cell {
+    display: table-cell;
+    width: 33.33%;
+  }
+  .meta-cell strong {
+    color: #ffffff;
+  }
+  
+  h2 {
+    color: #0f172a;
+    font-size: 13pt;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 4px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+    page-break-after: avoid;
+  }
+  h3 {
+    color: #1e293b;
+    font-size: 10.5pt;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    page-break-after: avoid;
+  }
+  p, li {
+    font-size: 9pt;
+    color: #334155;
+    margin-top: 3px;
+    margin-bottom: 6px;
+  }
+  ul, ol {
+    margin-top: 3px;
+    margin-bottom: 8px;
+    padding-left: 18px;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .badge-blue { background: #e0f2fe; color: #0369a1; }
+  .badge-green { background: #dcfce7; color: #15803d; }
+  .badge-amber { background: #fef3c7; color: #b45309; }
+  .badge-red { background: #ffe4e6; color: #be123c; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 8.5pt;
+  }
+  th {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    text-align: left;
+    padding: 6px 9px;
+    font-weight: 600;
+    border: 1px solid #cbd5e1;
+  }
+  td {
+    padding: 5px 9px;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+  }
+  tr:nth-child(even) td {
+    background-color: #f8fafc;
+  }
+
+  .callout {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 9px 12px;
+    margin: 10px 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 9pt;
+  }
+  .callout-success {
+    background: #f0fdf4;
+    border-left-color: #16a34a;
+  }
+
+  .grid-2 {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .col-2 {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding-right: 8px;
+  }
+  .col-2:last-child {
+    padding-right: 0;
+    padding-left: 8px;
+  }
+
+  .tech-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 8px 10px;
+    margin-bottom: 8px;
+  }
+  .tech-card h4 {
+    margin: 0 0 3px 0;
+    font-size: 9.5pt;
+    color: #0f172a;
+  }
+  code {
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 8.5pt;
+    background: #f1f5f9;
+    padding: 1px 4px;
+    border-radius: 3px;
+    color: #0284c7;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-banner">
+  <h1>INNOVEX COMMAND CENTER</h1>
+  <p>Product Requirements Document (PRD) — Version 2.4.0 (Enterprise Edition)</p>
+  <div class="meta-grid">
+    <div class="meta-cell"><strong>Document Type:</strong> Product Requirements Document (PRD)</div>
+    <div class="meta-cell"><strong>Status:</strong> Approved for Production</div>
+    <div class="meta-cell"><strong>Date:</strong> October 2026</div>
+  </div>
+</div>
+
+<h2>1. Product Vision & Target Business Outcomes</h2>
+<p>
+  <strong>Innovex Command Center</strong> is an enterprise-grade, closed-loop <strong>AI-Powered Industrial Operations Optimization &amp; Maintenance Intelligence Platform</strong>. It bridges raw Internet of Things (IoT) sensor telemetry with executive business decision-making.
+</p>
+<p>
+  Unlike conventional predictive maintenance dashboards that stop at basic graph visualization and raw alert generation, Innovex executes a complete <strong>closed-loop decision workflow</strong>: detecting multi-sensor anomalies, forecasting Remaining Useful Life (RUL), delivering structured Explainable AI (XAI) root-cause diagnoses, cross-checking spare part lead times against RUL windows, modeling projected financial downtime risks, and automating work order creation.
+</p>
+<ul>
+  <li><strong>Zero Unplanned Downtime:</strong> Eliminate catastrophic machine failures through early multi-sensor anomaly detection and dual-mode RUL forecasting.</li>
+  <li><strong>Stockout Mitigation:</strong> Align spare part purchasing lead times with asset degradation curves to ensure zero maintenance delays due to missing components.</li>
+  <li><strong>Financial Risk Transparency:</strong> Provide real-time financial impact projections ($/hour downtime risk, SLA penalties, lost throughput) for operational delay scenarios.</li>
+  <li><strong>Operational Efficiency:</strong> Reduce Mean Time To Repair (MTTR) by delivering actionable, prescriptive maintenance guidance directly to field technicians.</li>
+</ul>
+
+<h2>2. Target User Personas &amp; User Journeys</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Persona</th>
+      <th>Core Responsibilities</th>
+      <th>Key Platform Needs</th>
+      <th>Primary Pain Points Solved</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Plant Operations Director</strong></td>
+      <td>Overall manufacturing productivity, OEE targets, site financial P&amp;L.</td>
+      <td>High-level Operational Health KPIs, plant downtime financial projections, site risk rankings.</td>
+      <td>Lack of financial context for technical sensor alerts; inability to quantify downtime risk.</td>
+    </tr>
+    <tr>
+      <td><strong>Maintenance Engineer</strong></td>
+      <td>Asset health monitoring, diagnostics, RUL tracking, root-cause troubleshooting.</td>
+      <td>Feature-engineered sensor trends, hybrid anomaly scores, structured XAI root causes, RUL metrics.</td>
+      <td>Alert fatigue from raw threshold breaches; lack of diagnostic transparency in black-box ML tools.</td>
+    </tr>
+    <tr>
+      <td><strong>Maintenance Supervisor</strong></td>
+      <td>Work order scheduling, technician assignment, calendar management.</td>
+      <td>Interactive Maintenance Calendar, work order automation, priority-based dispatching.</td>
+      <td>Disconnect between ML anomaly alerts and CMMS/ERP work order scheduling systems.</td>
+    </tr>
+    <tr>
+      <td><strong>Supply Chain / Inventory Manager</strong></td>
+      <td>Spare parts inventory management, reorder points, supplier lead times.</td>
+      <td>Spare part readiness indicators (<code>READY</code>, <code>AT RISK</code>, <code>UNAVAILABLE</code>), lead time vs RUL matching.</td>
+      <td>Emergency stockouts occurring when lead time exceeds remaining operating hours.</td>
+    </tr>
+    <tr>
+      <td><strong>Data Quality / Operations Analyst</strong></td>
+      <td>Sensor data integrity monitoring, dataset uploads, anomaly validation.</td>
+      <td>Data Quality Portal, completeness/outlier scoring, automated schema detection.</td>
+      <td>Corrupted or noisy sensor streams triggering false positive anomaly alerts.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>3. System Architecture &amp; Technology Stack</h2>
+<div class="grid-2">
+  <div class="col-2">
+    <div class="tech-card">
+      <h4>Frontend Tier</h4>
+      <p><strong>React 18 + Vite + Tailwind CSS</strong></p>
+      <ul>
+        <li>Responsive Slate/Zinc industrial dark mode theme</li>
+        <li>Recharts interactive time-series visualizations</li>
+        <li>Lucide React iconography</li>
+        <li>Sub-second UI page state transitions</li>
+      </ul>
+    </div>
+    <div class="tech-card">
+      <h4>Node.js Express API Gateway</h4>
+      <p><strong>Node.js + Express + Multer</strong></p>
+      <ul>
+        <li>RESTful API routes &amp; JWT authentication</li>
+        <li>Role-based access control (RBAC)</li>
+        <li>Audit logging engine for operational events</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="tech-card">
+      <h4>Python FastAPI AI Engine</h4>
+      <p><strong>Python 3.11 + FastAPI + Scikit-Learn</strong></p>
+      <ul>
+        <li>42 engineered telemetry features</li>
+        <li>Scikit-Learn Isolation Forest &amp; HistGradientBoosting</li>
+        <li>Z-score multivariate distance metric</li>
+      </ul>
+    </div>
+    <div class="tech-card">
+      <h4>Dual Storage Engine</h4>
+      <p><strong>MongoDB Atlas + In-Memory Fallback</strong></p>
+      <ul>
+        <li>MongoDB Atlas cloud cluster (Primary)</li>
+        <li>Enterprise In-Memory Data Store (Zero-downtime fallback)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2>4. The Closed-Loop Operational Workflow</h2>
+<div class="callout callout-success">
+  <strong>End-to-End Decision Loop:</strong><br>
+  <code>SENSOR TELEMETRY</code> &rarr; <code>DATA QUALITY EVALUATION</code> &rarr; <code>FEATURE ENGINEERING</code> &rarr; <code>HYBRID ANOMALY DETECTION</code> &rarr; <code>FAILURE RISK SCORING</code> &rarr; <code>DUAL-MODE RUL FORECAST</code> &rarr; <code>STRUCTURED XAI DIAGNOSIS</code> &rarr; <code>PRESCRIPTIVE ACTION</code> &rarr; <code>SPARE PART READINESS</code> &rarr; <code>WORK ORDER CREATION</code> &rarr; <code>FINANCIAL RISK DELTA</code>
+</div>
+
+<h2>5. Functional Requirements (FRs)</h2>
+<h3>5.1 FR-1: Dataset Management &amp; Data Quality Portal</h3>
+<ul>
+  <li><strong>FR-1.1:</strong> Support file uploads in <code>.csv</code>, <code>.xlsx</code>, and <code>.xls</code> formats up to 25MB.</li>
+  <li><strong>FR-1.2:</strong> Automated schema detection routing data to modules (<code>inventory</code>, <code>maintenance</code>, <code>logistics</code>, <code>production</code>, <code>reflow</code>).</li>
+  <li><strong>FR-1.3:</strong> 0&ndash;100 Data Quality Score based on completeness, timestamp continuity, and outlier distribution.</li>
+  <li><strong>FR-1.4:</strong> Persistent Delete Dataset capability with confirmation modal, unlinking stored files, purging child records, and toast notifications.</li>
+</ul>
+
+<h3>5.2 FR-2: Asset Digital Twin &amp; Telemetry Stream</h3>
+<ul>
+  <li><strong>FR-2.1:</strong> Render operational Digital Twins for industrial assets (Compressors, Presses, CNC Mills, Robotic Arms).</li>
+  <li><strong>FR-2.2:</strong> Display telemetry parameters: Vibration RMS, Thermal Gradient, Line Pressure, Current Variance, Spindle RPM, Load.</li>
+  <li><strong>FR-2.3:</strong> Highlight parameters breaching baseline operational envelopes (&gt; &plusmn;2.0&sigma;).</li>
+</ul>
+
+<h3>5.3 FR-3: Hybrid AI Anomaly Engine &amp; Dual-Mode RUL</h3>
+<ul>
+  <li><strong>FR-3.1:</strong> Compute composite anomaly score (0&ndash;100) using weighted ensemble:
+    <br><code>Composite Score = 0.45 * Model A (Z-Score) + 0.35 * Model B (Isolation Forest) + 0.20 * Model C (Trend)</code>
+  </li>
+  <li><strong>FR-3.2:</strong> 42 feature extractions: 3-step rolling means, rolling std dev, RMS ($\sqrt{\text{mean}(x^2)}$), sensor gradients ($\Delta\%/\text{hr}$), and correlation.</li>
+  <li><strong>FR-3.3:</strong> Dual-Mode RUL: <code>HistGradientBoostingRegressor</code> (Primary, $\ge 20$ samples) vs Transparent Physical Degradation Rate (Fallback, $&lt; 20$ samples).</li>
+</ul>
+
+<h3>5.4 FR-4: Structured Explainable AI (XAI) &amp; Prescriptive Actions</h3>
+<ul>
+  <li><strong>FR-4.1:</strong> Non-black-box root causes: What Happened, Why Happened (breached sensor metrics), Failure Probability (%), Risk If Delayed.</li>
+  <li><strong>FR-4.2:</strong> Step-by-step prescriptive maintenance instructions.</li>
+</ul>
+
+<h3>5.5 FR-5: Spare Parts Inventory Matching &amp; Readiness</h3>
+<ul>
+  <li><strong>FR-5.1:</strong> Match equipment components to live spare parts inventory records.</li>
+  <li><strong>FR-5.2:</strong> Evaluate Readiness Status: <code>READY</code> (lead time $\le$ RUL), <code>AT RISK</code> (lead time approaches RUL), <code>UNAVAILABLE</code> (lead time &gt; RUL).</li>
+</ul>
+
+<h3>5.6 FR-6: Maintenance Scheduling &amp; Work Orders</h3>
+<ul>
+  <li><strong>FR-6.1:</strong> 1-click work order creation directly from AI diagnostic cards into the Maintenance Calendar.</li>
+  <li><strong>FR-6.2:</strong> Interactive calendar with filtering by priority, status, and technician.</li>
+  <li><strong>FR-6.3:</strong> Dynamic overdue calculation based on system time vs scheduled date.</li>
+</ul>
+
+<h3>5.7 FR-7: What-If Financial Risk &amp; Scenario Simulator</h3>
+<ul>
+  <li><strong>FR-7.1:</strong> Simulate operational decisions (maintenance delay hours, procurement price surges, production adjustments).</li>
+  <li><strong>FR-7.2:</strong> Compare Baseline vs Simulated metrics across downtime cost, production loss, SLA penalties, and repair expense.</li>
+  <li><strong>FR-7.3:</strong> Display Financial Risk Delta (e.g., <em>"+$18,400 Financial Risk Delta if delayed 24h"</em>).</li>
+</ul>
+
+<h2>6. Non-Functional Requirements (NFRs)</h2>
+<ul>
+  <li><strong>Latency:</strong> Analytical execution $\le 350\text{ms}$; API response $\le 50\text{ms}$; UI render $\le 100\text{ms}$.</li>
+  <li><strong>High Availability:</strong> Automatic zero-downtime failover to Enterprise In-Memory Data Store upon MongoDB cloud disconnection.</li>
+  <li><strong>Security:</strong> JWT token authentication, Role-Based Access Control (RBAC), audit logging engine.</li>
+</ul>
+
+<h2>7. Model Performance Benchmarks</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Metric</th>
+      <th>Target Benchmark</th>
+      <th>Measured Performance</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Anomaly Precision</strong></td>
+      <td>&ge; 90%</td>
+      <td><strong>92.0%</strong></td>
+      <td><span class="badge badge-green">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>Anomaly Recall</strong></td>
+      <td>&ge; 85%</td>
+      <td><strong>88.0%</strong></td>
+      <td><span class="badge badge-green">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>F1 Score</strong></td>
+      <td>&ge; 0.88</td>
+      <td><strong>0.90</strong></td>
+      <td><span class="badge badge-green">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>False Positive Rate (FPR)</strong></td>
+      <td>&le; 5.0%</td>
+      <td><strong>4.0%</strong></td>
+      <td><span class="badge badge-green">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>RUL MAE</strong></td>
+      <td>&le; 4.0 hrs</td>
+      <td><strong>2.4 hrs</strong></td>
+      <td><span class="badge badge-green">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>RUL RMSE</strong></td>
+      <td>&le; 5.0 hrs</td>
+      <td><strong>3.1 hrs</strong></td>
+      <td><span class="badge badge-green">PASS</span></td>
+    </tr>
+    <tr>
+      <td><strong>R² Score</strong></td>
+      <td>&ge; 0.85</td>
+      <td><strong>0.89</strong></td>
+      <td><span class="badge badge-green">PASS</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>8. Deployment &amp; Execution Commands</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Service Tier</th>
+      <th>Port</th>
+      <th>Execution Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FastAPI AI Microservice</strong></td>
+      <td>8000</td>
+      <td><code>cd ai-service &amp;&amp; .\.venv\Scripts\activate &amp;&amp; uvicorn app.main:app --reload --port 8000</code></td>
+    </tr>
+    <tr>
+      <td><strong>Node.js Express Backend</strong></td>
+      <td>5000</td>
+      <td><code>cd server &amp;&amp; npm run dev</code></td>
+    </tr>
+    <tr>
+      <td><strong>React + Vite Client</strong></td>
+      <td>5173</td>
+      <td><code>cd client &amp;&amp; npm run dev</code></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>

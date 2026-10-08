@@ -1,0 +1,8 @@
+order_id,source,destination,distance,delivery_deadline,order_weight,vehicle_id,vehicle_capacity,transportation_cost,fuel_cost,delivery_time,priority
+ORD-7001,Warehouse Alpha,Hub East,340,2026-10-05 14:00,1200,TRK-01,1500,450.00,120.00,6.5,High
+ORD-7002,Warehouse Alpha,Hub North,520,2026-10-06 10:00,2100,TRK-02,2000,780.00,210.00,9.2,Critical
+ORD-7003,Warehouse Beta,Hub West,180,2026-10-04 18:00,850,TRK-03,1000,230.00,65.00,3.8,Medium
+ORD-7004,Warehouse Beta,Hub South,410,2026-10-05 20:00,1450,TRK-01,1500,560.00,155.00,7.5,High
+ORD-7005,Warehouse Gamma,Hub East,290,2026-10-06 12:00,980,TRK-04,1200,390.00,105.00,5.2,Low
+ORD-7006,Warehouse Alpha,Hub South,450,2026-10-04 12:00,1850,TRK-02,2000,640.00,180.00,8.1,Critical
+ORD-7007,Warehouse Beta,Hub North,610,2026-10-07 16:00,1100,TRK-03,1000,850.00,240.00,11.0,High

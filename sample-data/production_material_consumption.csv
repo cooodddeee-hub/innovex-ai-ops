@@ -1,0 +1,9 @@
+batch_id,product,date,material,standard_quantity,actual_quantity,production_quantity,unit_cost,shift,department
+B-1001,Widget-X,2026-09-20,High-Grade Polymer,1.20,1.45,500,14.50,Morning,Forming
+B-1002,Widget-X,2026-09-21,High-Grade Polymer,1.20,1.52,500,14.50,Evening,Forming
+B-1003,Widget-Y,2026-09-20,Aluminum Alloy Sheet,2.50,2.60,300,45.00,Morning,Stamping
+B-1004,Widget-Y,2026-09-21,Aluminum Alloy Sheet,2.50,2.95,300,45.00,Night,Stamping
+B-1005,Assembly-Z,2026-09-22,Copper Wiring Wire,0.80,1.15,1000,8.20,Morning,Electrical
+B-1006,Assembly-Z,2026-09-23,Copper Wiring Wire,0.80,1.22,1000,8.20,Evening,Electrical
+B-1007,Widget-X,2026-09-22,High-Grade Polymer,1.20,1.38,600,14.50,Night,Forming
+B-1008,Assembly-Z,2026-09-24,Copper Wiring Wire,0.80,1.18,1000,8.20,Morning,Electrical

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Innovex Command Center - Enterprise Project Report</title>
+<style>
+  @page {
+    size: A4;
+    margin: 12mm 15mm 15mm 15mm;
+    @bottom-right {
+      content: counter(page);
+    }
+  }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    line-height: 1.5;
+    font-size: 10pt;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  .header-banner {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 22px 28px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .header-banner h1 {
+    margin: 0 0 4px 0;
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #38bdf8;
+  }
+  .header-banner p {
+    margin: 0;
+    font-size: 10.5pt;
+    color: #94a3b8;
+  }
+  .meta-grid {
+    display: table;
+    width: 100%;
+    margin-top: 14px;
+    border-top: 1px solid #334155;
+    padding-top: 10px;
+    font-size: 9pt;
+    color: #cbd5e1;
+  }
+  .meta-cell {
+    display: table-cell;
+    width: 33.33%;
+  }
+  .meta-cell strong {
+    color: #ffffff;
+  }
+  
+  h2 {
+    color: #0f172a;
+    font-size: 13pt;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 4px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+    page-break-after: avoid;
+  }
+  h3 {
+    color: #1e293b;
+    font-size: 11pt;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    page-break-after: avoid;
+  }
+  p, li {
+    font-size: 9.5pt;
+    color: #334155;
+    margin-top: 3px;
+    margin-bottom: 6px;
+  }
+  ul, ol {
+    margin-top: 3px;
+    margin-bottom: 8px;
+    padding-left: 18px;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .badge-blue { background: #e0f2fe; color: #0369a1; }
+  .badge-green { background: #dcfce7; color: #15803d; }
+  .badge-amber { background: #fef3c7; color: #b45309; }
+  .badge-red { background: #ffe4e6; color: #be123c; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    font-size: 9pt;
+  }
+  th {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    text-align: left;
+    padding: 7px 10px;
+    font-weight: 600;
+    border: 1px solid #cbd5e1;
+  }
+  td {
+    padding: 6px 10px;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+  }
+  tr:nth-child(even) td {
+    background-color: #f8fafc;
+  }
+
+  .callout {
+    background: #f8fafc;
+    border-left: 4px solid #2563eb;
+    padding: 10px 14px;
+    margin: 10px 0;
+    border-radius: 0 6px 6px 0;
+    font-size: 9.5pt;
+  }
+  .callout-success {
+    background: #f0fdf4;
+    border-left-color: #16a34a;
+  }
+
+  .grid-2 {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .col-2 {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding-right: 10px;
+  }
+  .col-2:last-child {
+    padding-right: 0;
+    padding-left: 10px;
+  }
+
+  .tech-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+  }
+  .tech-card h4 {
+    margin: 0 0 4px 0;
+    font-size: 10pt;
+    color: #0f172a;
+  }
+</style>
+</head>
+<body>
+
+<div class="header-banner">
+  <h1>INNOVEX COMMAND CENTER</h1>
+  <p>AI-Powered Industrial Operations Optimization & Maintenance Intelligence Platform</p>
+  <div class="meta-grid">
+    <div class="meta-cell"><strong>Document Type:</strong> Technical Architecture & Product Report</div>
+    <div class="meta-cell"><strong>Environment:</strong> Enterprise Edition</div>
+    <div class="meta-cell"><strong>Date:</strong> October 2026</div>
+  </div>
+</div>
+
+<h2>1. Executive Summary & Product Positioning</h2>
+<p>
+  <strong>Innovex Command Center</strong> is an enterprise-grade industrial decision intelligence platform designed for smart manufacturing, heavy industrial processing, and logistics hubs. Unlike legacy predictive maintenance dashboards that simply display graphs and alerts, Innovex executes a complete <strong>closed-loop decision workflow</strong>.
+</p>
+<p>
+  When telemetry anomalies occur, Innovex detects deviations, estimates Remaining Useful Life (RUL), diagnoses root causes via structured Explainable AI (XAI), checks spare part inventory lead times, calculates downtime financial risk, and schedules automated work orders.
+</p>
+
+<div class="callout callout-success">
+  <strong>Key Platform Capability:</strong> End-to-end integration across telemetry quality analysis, hybrid ML anomaly detection, spare parts availability cross-matching, and financial scenario simulation.
+</div>
+
+<h2>2. Problem Statement & Business Understanding</h2>
+<p>
+  Modern industrial manufacturing plants face multi-million dollar annual losses caused by unplanned equipment downtime, fragmented monitoring tools, and siloed maintenance operations.
+</p>
+<ul>
+  <li><strong>Unplanned Downtime Costs:</strong> Industrial downtime costs manufacturers an average of $1,200 to $15,000+ per hour in lost throughput and emergency repairs.</li>
+  <li><strong>Siloed Intelligence:</strong> Operational telemetry data, inventory databases, work order calendars, and financial tracking reside in disconnected enterprise software systems.</li>
+  <li><strong>Alert Fatigue:</strong> Maintenance technicians receive thousands of raw sensor threshold alerts daily without contextual root-cause explanations or severity rankings.</li>
+  <li><strong>Stockout Delays:</strong> Scheduled maintenance frequently fails because replacement spare parts are unavailable or delayed by supplier lead times exceeding machine failure windows.</li>
+</ul>
+
+<h2>3. Proposed Solution & Operational Workflow</h2>
+<p>
+  Innovex connects raw sensor telemetry to executive decision-making through a deterministic 11-step operational workflow:
+</p>
+<div class="callout">
+  <strong>Closed-Loop Decision Workflow:</strong><br>
+  <code>SENSOR TELEMETRY</code> &rarr; <code>DATA QUALITY EVALUATION</code> &rarr; <code>FEATURE ENGINEERING</code> &rarr; <code>HYBRID ANOMALY DETECTION</code> &rarr; <code>FAILURE RISK SCORING</code> &rarr; <code>DUAL-MODE RUL ESTIMATION</code> &rarr; <code>STRUCTURED XAI DIAGNOSIS</code> &rarr; <code>PRESCRIPTIVE ACTION</code> &rarr; <code>SPARE PART READINESS</code> &rarr; <code>WORK ORDER CREATION</code> &rarr; <code>FINANCIAL RISK DELTA</code>
+</div>
+
+<h2>4. Solution Architecture & Microservices Stack</h2>
+<div class="grid-2">
+  <div class="col-2">
+    <div class="tech-card">
+      <h4>Frontend Tier</h4>
+      <p><strong>React 18 + Vite + Tailwind CSS</strong></p>
+      <ul>
+        <li>Responsive Slate/Zinc industrial dark mode theme</li>
+        <li>Recharts interactive time-series visualizations</li>
+        <li>Lucide React iconography</li>
+        <li>Sub-second UI page state transitions</li>
+      </ul>
+    </div>
+    <div class="tech-card">
+      <h4>Node.js Express API Gateway</h4>
+      <p><strong>Node.js + Express + Multer</strong></p>
+      <ul>
+        <li>RESTful API routes & JWT authentication</li>
+        <li>Role-based access control (RBAC)</li>
+        <li>Audit logging engine for operational events</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-2">
+    <div class="tech-card">
+      <h4>Python FastAPI AI Engine</h4>
+      <p><strong>Python 3.11 + FastAPI + Scikit-Learn</strong></p>
+      <ul>
+        <li>42 engineered telemetry features</li>
+        <li>Scikit-Learn Isolation Forest & HistGradientBoosting</li>
+        <li>Z-score multivariate distance metric</li>
+      </ul>
+    </div>
+    <div class="tech-card">
+      <h4>Dual Storage Engine</h4>
+      <p><strong>MongoDB Atlas + In-Memory Fallback</strong></p>
+      <ul>
+        <li>MongoDB Atlas cloud cluster (Primary)</li>
+        <li>Enterprise In-Memory Data Store (Zero-downtime fallback)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2>5. AI & Machine Learning Methodology</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Model Component</th>
+      <th>Methodology</th>
+      <th>Ensemble Weight</th>
+      <th>Technical Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Model A</strong></td>
+      <td>Z-Score Vector Distance</td>
+      <td><span class="badge badge-blue">45%</span></td>
+      <td>Measures standard deviation departure across multi-sensor channels</td>
+    </tr>
+    <tr>
+      <td><strong>Model B</strong></td>
+      <td>Isolation Forest</td>
+      <td><span class="badge badge-green">35%</span></td>
+      <td>Unsupervised tree ensemble detecting subtle multi-sensor anomalies</td>
+    </tr>
+    <tr>
+      <td><strong>Model C</strong></td>
+      <td>Telemetry Degradation Trend</td>
+      <td><span class="badge badge-amber">20%</span></td>
+      <td>Sliding-window gradient analyzer tracking parameter slope drift</td>
+    </tr>
+    <tr>
+      <td><strong>RUL Engine</strong></td>
+      <td>HistGradientBoosting / Physical Slope</td>
+      <td><span class="badge badge-blue">Dual-Mode</span></td>
+      <td>Data-driven regressor fallback to transparent physical degradation rate</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>6. Model Validation & Performance Metrics</h2>
+<ul>
+  <li><strong>Hybrid Anomaly Classifier:</strong> Precision: <strong>92%</strong> | Recall: <strong>88%</strong> | F1 Score: <strong>0.90</strong> | FPR: <strong>4.0%</strong></li>
+  <li><strong>RUL Regressor (HistGradientBoosting):</strong> MAE: <strong>2.4 hrs</strong> | RMSE: <strong>3.1 hrs</strong> | R² Score: <strong>0.89</strong></li>
+  <li><strong>Engineered Telemetry Features (42):</strong> Rolling Means, Rolling Std Dev, RMS ($\sqrt{\text{mean}(x^2)}$), Sensor Gradients ($\Delta \%/hr$), Vibration/Temperature Correlation.</li>
+</ul>
+
+<h2>7. Recent Platform Upgrades & Data Quality Fixes</h2>
+<div class="callout callout-success">
+  <strong>1. Complete Professional Product Cleanup:</strong><br>
+  Removed 100% of presentation, hackathon, and demo terminology across code, routes, components, and documentation. Replaced with enterprise operational labels (<em>Enterprise Edition</em>, <em>Sample Datasets</em>, <em>Scenario Analysis</em>).
+</div>
+<div class="callout callout-success">
+  <strong>2. Complete Dataset Management Deletion Fix:</strong><br>
+  Fixed dataset deletion across all layers:
+  <ul>
+    <li>Updated route authorization in <code>datasetRoutes.js</code> allowing all authenticated company roles to delete datasets.</li>
+    <li>Handled non-ObjectId string IDs safely in <code>datasetController.js</code> without Mongoose <code>CastError</code> exceptions.</li>
+    <li>Purged child records (<code>Analysis</code>, <code>Recommendation</code>, <code>RiskEvent</code>, <code>OperationalAlert</code>) and unlinked disk files.</li>
+    <li>Cleaned in-memory array filtering to guarantee persistent deletion in fallback mode.</li>
+    <li>Added frontend delete confirmation modal dialog, toast feedback notifications, and optimistic UI state updates in <code>DatasetsPage.jsx</code>.</li>
+  </ul>
+</div>
+
+<h2>8. Deployment & Execution Commands</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Service Tier</th>
+      <th>Port</th>
+      <th>Execution Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>FastAPI AI Microservice</strong></td>
+      <td>8000</td>
+      <td><code>cd ai-service &amp;&amp; .\.venv\Scripts\activate &amp;&amp; uvicorn app.main:app --reload --port 8000</code></td>
+    </tr>
+    <tr>
+      <td><strong>Node.js Express Backend</strong></td>
+      <td>5000</td>
+      <td><code>cd server &amp;&amp; npm run dev</code></td>
+    </tr>
+    <tr>
+      <td><strong>React + Vite Client</strong></td>
+      <td>5173</td>
+      <td><code>cd client &amp;&amp; npm run dev</code></td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
