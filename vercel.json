@@ -1,3 +1,4 @@
+@'
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "services": {
@@ -30,6 +31,18 @@
       }
     },
     {
+      "source": "/dashboard",
+      "destination": {
+        "service": "client"
+      }
+    },
+    {
+      "source": "/dashboard/(.*)",
+      "destination": {
+        "service": "client"
+      }
+    },
+    {
       "source": "/(.*)",
       "destination": {
         "service": "client"
@@ -37,3 +50,4 @@
     }
   ]
 }
+'@ | Set-Content -Path ".\vercel.json" -Encoding UTF8
